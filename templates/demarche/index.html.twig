@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TESTSOAP{% endblock %}
+
+{% block body %}
+    <div class="jumbotron">
+        <h1>MiSIV interface test</h1>
+        <h6>MiSIV implementation provided by TMS</h6>
+        <hr>
+    </div>
+    {{ form_start(form) }}
+    {{ form_row(form.demandeClient, { 'label': 'Démarche :' }) }}
+    <button>Valider</button>
+    {{ form_end(form) }}
+{% endblock %}

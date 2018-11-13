@@ -12,11 +12,6 @@ class DemandeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('type')
-            ->add('oppose')
-            ->add('statut')
-            ->add('paiement')
-            ->add('parameters')
             ->add('demandeClient')
         ;
     }
