@@ -19,44 +19,44 @@ class Client
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=255)
      */
-    private $nom;
-
-    /**
-     * @ORM\Column(type="string", length=200)
-     */
-    private $prenom;
+    private $clientNom;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $genre;
+    private $clientPrenom;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $nomusage;
+    private $clientGenre;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $clientNomUsage;
 
     /**
      * @ORM\Column(type="date")
      */
-    private $datenaissance;
+    private $clientDateNaissance;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $lieunaissance;
+    private $clientLieuNaissance;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $dptnaissance;
+    private $clientDptNaissance;
 
     /**
-     * @ORM\Column(type="string", length=200)
+     * @ORM\Column(type="string", length=255)
      */
-    private $paysnaissance;
+    private $clientPaysNaissance;
 
     /**
      * @ORM\OneToOne(targetEntity="App\Entity\Compte", cascade={"persist", "remove"})
@@ -69,19 +69,19 @@ class Client
     private $clientContact;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Demande", mappedBy="demandeClient")
+     * @ORM\OneToMany(targetEntity="App\Entity\Demande", mappedBy="client")
      */
-    private $demandes;
+    private $clientDemande;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Vehicule", mappedBy="vehiculeClient")
+     * @ORM\OneToMany(targetEntity="App\Entity\Vehicule", mappedBy="client")
      */
-    private $vehicules;
+    private $clientVehicule;
 
     public function __construct()
     {
-        $this->demandes = new ArrayCollection();
-        $this->vehicules = new ArrayCollection();
+        $this->clientDemande = new ArrayCollection();
+        $this->clientVehicule = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -89,98 +89,98 @@ class Client
         return $this->id;
     }
 
-    public function getNom(): ?string
+    public function getClientNom(): ?string
     {
-        return $this->nom;
+        return $this->clientNom;
     }
 
-    public function setNom(string $nom): self
+    public function setClientNom(string $clientNom): self
     {
-        $this->nom = $nom;
+        $this->clientNom = $clientNom;
 
         return $this;
     }
 
-    public function getPrenom(): ?string
+    public function getClientPrenom(): ?string
     {
-        return $this->prenom;
+        return $this->clientPrenom;
     }
 
-    public function setPrenom(string $prenom): self
+    public function setClientPrenom(string $clientPrenom): self
     {
-        $this->prenom = $prenom;
+        $this->clientPrenom = $clientPrenom;
 
         return $this;
     }
 
-    public function getGenre(): ?string
+    public function getClientGenre(): ?string
     {
-        return $this->genre;
+        return $this->clientGenre;
     }
 
-    public function setGenre(string $genre): self
+    public function setClientGenre(string $clientGenre): self
     {
-        $this->genre = $genre;
+        $this->clientGenre = $clientGenre;
 
         return $this;
     }
 
-    public function getNomusage(): ?string
+    public function getClientNomUsage(): ?string
     {
-        return $this->nomusage;
+        return $this->clientNomUsage;
     }
 
-    public function setNomusage(string $nomusage): self
+    public function setClientNomUsage(string $clientNomUsage): self
     {
-        $this->nomusage = $nomusage;
+        $this->clientNomUsage = $clientNomUsage;
 
         return $this;
     }
 
-    public function getDatenaissance(): ?\DateTimeInterface
+    public function getClientDateNaissance(): ?\DateTimeInterface
     {
-        return $this->datenaissance;
+        return $this->clientDateNaissance;
     }
 
-    public function setDatenaissance(\DateTimeInterface $datenaissance): self
+    public function setClientDateNaissance(\DateTimeInterface $clientDateNaissance): self
     {
-        $this->datenaissance = $datenaissance;
+        $this->clientDateNaissance = $clientDateNaissance;
 
         return $this;
     }
 
-    public function getLieunaissance(): ?string
+    public function getClientLieuNaissance(): ?string
     {
-        return $this->lieunaissance;
+        return $this->clientLieuNaissance;
     }
 
-    public function setLieunaissance(string $lieunaissance): self
+    public function setClientLieuNaissance(string $clientLieuNaissance): self
     {
-        $this->lieunaissance = $lieunaissance;
+        $this->clientLieuNaissance = $clientLieuNaissance;
 
         return $this;
     }
 
-    public function getDptnaissance(): ?string
+    public function getClientDptNaissance(): ?string
     {
-        return $this->dptnaissance;
+        return $this->clientDptNaissance;
     }
 
-    public function setDptnaissance(string $dptnaissance): self
+    public function setClientDptNaissance(string $clientDptNaissance): self
     {
-        $this->dptnaissance = $dptnaissance;
+        $this->clientDptNaissance = $clientDptNaissance;
 
         return $this;
     }
 
-    public function getPaysnaissance(): ?string
+    public function getClientPaysNaissance(): ?string
     {
-        return $this->paysnaissance;
+        return $this->clientPaysNaissance;
     }
 
-    public function setPaysnaissance(string $paysnaissance): self
+    public function setClientPaysNaissance(string $clientPaysNaissance): self
     {
-        $this->paysnaissance = $paysnaissance;
+        $this->clientPaysNaissance = $clientPaysNaissance;
 
         return $this;
     }
@@ -212,28 +212,28 @@ class Client
     /**
      * @return Collection|Demande[]
      */
-    public function getDemandes(): Collection
+    public function getClientDemande(): Collection
     {
-        return $this->demandes;
+        return $this->clientDemande;
     }
 
-    public function addDemande(Demande $demande): self
+    public function addClientDemande(Demande $clientDemande): self
     {
-        if (!$this->demandes->contains($demande)) {
-            $this->demandes[] = $demande;
-            $demande->setDemandeClient($this);
+        if (!$this->clientDemande->contains($clientDemande)) {
+            $this->clientDemande[] = $clientDemande;
+            $clientDemande->setClient($this);
         }
 
         return $this;
     }
 
-    public function removeDemande(Demande $demande): self
+    public function removeClientDemande(Demande $clientDemande): self
     {
-        if ($this->demandes->contains($demande)) {
-            $this->demandes->removeElement($demande);
+        if ($this->clientDemande->contains($clientDemande)) {
+            $this->clientDemande->removeElement($clientDemande);
             // set the owning side to null (unless already changed)
-            if ($demande->getDemandeClient() === $this) {
-                $demande->setDemandeClient(null);
+            if ($clientDemande->getClient() === $this) {
+                $clientDemande->setClient(null);
             }
         }
 
@@ -243,28 +243,28 @@ class Client
     /**
      * @return Collection|Vehicule[]
      */
-    public function getVehicules(): Collection
+    public function getClientVehicule(): Collection
     {
-        return $this->vehicules;
+        return $this->clientVehicule;
     }
 
-    public function addVehicule(Vehicule $vehicule): self
+    public function addClientVehicule(Vehicule $clientVehicule): self
     {
-        if (!$this->vehicules->contains($vehicule)) {
-            $this->vehicules[] = $vehicule;
-            $vehicule->setVehiculeClient($this);
+        if (!$this->clientVehicule->contains($clientVehicule)) {
+            $this->clientVehicule[] = $clientVehicule;
+            $clientVehicule->setClient($this);
         }
 
         return $this;
     }
 
-    public function removeVehicule(Vehicule $vehicule): self
+    public function removeClientVehicule(Vehicule $clientVehicule): self
     {
-        if ($this->vehicules->contains($vehicule)) {
-            $this->vehicules->removeElement($vehicule);
+        if ($this->clientVehicule->contains($clientVehicule)) {
+            $this->clientVehicule->removeElement($clientVehicule);
             // set the owning side to null (unless already changed)
-            if ($vehicule->getVehiculeClient() === $this) {
-                $vehicule->setVehiculeClient(null);
+            if ($clientVehicule->getClient() === $this) {
+                $clientVehicule->setClient(null);
             }
         }
 

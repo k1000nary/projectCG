@@ -19,39 +19,60 @@ class Contact
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $telmobile;
+    private $contact_telmobile;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $telfixe;
+    private $contact_telfixe;
 
-    public function getId(): ?int
+    /**
+     * @return mixed
+     */
+    public function getId()
     {
         return $this->id;
     }
 
-    public function getTelmobile(): ?string
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
     {
-        return $this->telmobile;
+        $this->id = $id;
     }
 
-    public function setTelmobile(string $telmobile): self
+    /**
+     * @return mixed
+     */
+    public function getContactTelmobile()
     {
-        $this->telmobile = $telmobile;
-
-        return $this;
+        return $this->contact_telmobile;
     }
 
-    public function getTelfixe(): ?string
+    /**
+     * @param mixed $contact_telmobile
+     */
+    public function setContactTelmobile($contact_telmobile): void
     {
-        return $this->telfixe;
+        $this->contact_telmobile = $contact_telmobile;
     }
 
-    public function setTelfixe(?string $telfixe): self
+    /**
+     * @return mixed
+     */
+    public function getContactTelfixe()
     {
-        $this->telfixe = $telfixe;
-
-        return $this;
+        return $this->contact_telfixe;
     }
+
+    /**
+     * @param mixed $contact_telfixe
+     */
+    public function setContactTelfixe($contact_telfixe): void
+    {
+        $this->contact_telfixe = $contact_telfixe;
+    }
+
+
 }

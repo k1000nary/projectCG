@@ -46,6 +46,11 @@ class Demande
      */
     private $parameters;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="clientDemande")
+     */
+    private $client;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -119,6 +124,18 @@ class Demande
     public function setParameters(?string $parameters): self
     {
         $this->parameters = $parameters;
+
+        return $this;
+    }
+
+    public function getClient(): ?Client
+    {
+        return $this->client;
+    }
+
+    public function setClient(?Client $client): self
+    {
+        $this->client = $client;
 
         return $this;
     }

@@ -66,6 +66,11 @@ class Vehicule
      */
     private $vehiculeClient;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="clientVehicule")
+     */
+    private $client;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -187,6 +192,18 @@ class Vehicule
     public function setVehiculeClient(?Client $vehiculeClient): self
     {
         $this->vehiculeClient = $vehiculeClient;
+
+        return $this;
+    }
+
+    public function getClient(): ?Client
+    {
+        return $this->client;
+    }
+
+    public function setClient(?Client $client): self
+    {
+        $this->client = $client;
 
         return $this;
     }
