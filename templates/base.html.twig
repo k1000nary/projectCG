@@ -1,22 +1,177 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr" xml:lang="fr">
 
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" /> {% block meta %}{% endblock %}
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        <div class="container m-l-5">
-            {% block body %}{% endblock %}
-            {% block javascripts %}{% endblock %}
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" /> {% block meta %}{% endblock %}
+  <title>{% block title %}Welcome!{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link rel="stylesheet" href="{{ asset('bundles/easyadmin/stylesheet/css/styles.css') }}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+
+<body id="{% block body_id %}{% endblock %}" class="body-blog">
+
+  {% block nav %}
+  <div class="defileParent">
+    <span class="defile" data-text=" Habilitation Ministère de l’Intérieur : n°222442 // Agrément Trésor Public : n°55337 ">
+
+    </span>
+  </div>
+
+  <div class="row head">
+    <div class="col-12 head-message">
+      <p>Habilitation Ministère de l’Intérieur : <strong>n°222442</strong> //
+      Agrément Trésor Public : <strong>n°55337</strong>
+    </div>
+    <!-- <div class="col-12 container-fluid head-first">
+      Site non affilié à la source officielle de l'ANTS. </span>Service privé habilité et agréé par le Ministère de l'Intérieur. Possibilité d'utiliser le site de l'<a href="https://ants.gouv.fr" target="_blank">ANTS</a> sans frais.
+    </div> -->
+    <div class="col-12 row head-img">
+      <div class="col-12 col-lg-3 row d-flex align-items-center head-logo">
+        <a class="col-8 col-sm-6 mx-auto" href="Home.php">
+          <img class="rounded mx-auto d-block img-fluid" src="{{ asset('bundles/easyadmin/img/logo.png') }}" alt="">
+          <img class="rounded mx-auto d-block img-fluid mb-2" src="{{ asset('bundles/easyadmin/img/habilitation.png') }}" alt="">
+        </a>
+        <div class="col-10 mx-auto head-ref row d-flex flex-row align-items-center my-flex-container">
+          <div class="col-10 mx-auto head-ref--box">
+
+          </div>
         </div>
-    </body>
+      </div>
+    </div>
+  </div>
+  <nav class="row menu">
+  <a href="/Home.php" class="col-4 col-sm-4 menu-item">
+    <li>
+      <div class="col-12 menu-line accueil"></div>
+      <h6>Accueil <span class="menu-line-span">Bienvenue chez CG Officiel</span></h6>
+    </li>
+  </a>
+  <a href="/Commander.php" class="col-4 col-sm-4 menu-item">
+    <li>
+      <div class="col-12 menu-line commander"></div>
+      <h6>Commander <span class="menu-line-span">votre certficat d'immatriculation</span></h6>
+    </li>
+  </a>
+  <a href="/Vos-demarches.php" class="col-4 col-sm-4 menu-item">
+    <li>
+      <div class="col-12 menu-line demarche"></div>
+      <h6>Vos démarches <span class="menu-line-span">et quelques conseils</span></h6>
+    </li>
+  </a>
+  </nav>
+
+
+  <!-- ____________________________________________________________________________________________________________________________________________________ Ajout Pierre -->
+  <div class="col-12 show-container">
+    <div class="row search">
+      <div class="col-12 search-titre">
+        <h2>Calculez le prix de votre carte grise</h2>
+      </div>
+      <button type="button" class="mx-auto btn btn-outline-light">ACCEDER AU FORMULAIRE</button>
+    </div>
+
+  </div>
+  <!-- ____________________________________________________________________________________________________________________________________________________ Fin Ajout Pierre -->
+  {% endblock %} {% block flash %} {% for flash_message in app.session.flashbag.get('success') %}
+  <div class="container alert alert-success" role="alert">
+    {{ flash_message }}
+  </div>
+  {% endfor %} {% for flash_message in app.session.flashbag.get('info') %}
+  <div class="container alert alert-info" role="alert">
+    {{ flash_message }}
+  </div>
+  {% endfor %} {% for flash_message in app.session.flashbag.get('warning') %}
+  <div class="container alert alert-warning" role="alert">
+    {{ flash_message }}
+  </div>
+  {% endfor %} {% for flash_message in app.session.flashbag.get('danger') %}
+  <div class="container alert alert-danger" role="alert">
+    {{ flash_message }}
+  </div>
+  {% endfor %} {% endblock %}
+
+  <div class="col-12 bck1 padded">
+    {% block body %} {% endblock %}
+  </div>
+
+  {% block footer %} {% endblock %} {% block javascripts %}
+  <script src="{{ asset('javascript/ckeditor/adapters/jquery.js') }}" type="text/javascript"></script>
+  <script src="{{ asset('javascript/ckeditor/ckeditor.js') }}" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('textarea.ckeditor').ckeditor();
+    })
+    $('#myModal').on('shown.bs.modal', function() {
+      $('#myInput').trigger('focus')
+    });
+  </script>
+  {% endblock %}
+  <div class="col-12 row footer d-flex flex-row align-items-center my-flex-container ">
+    <div class="col-12 col-lg-3 row d-flex flex-row align-items-center my-flex-container head-logo">
+      <a class="col-2 col-sm-2 col-md-2  col-lg-4 d-flex flex-row align-items-center my-flex-container  mx-auto" href="Home.php">
+        <img class="rounded mx-auto d-block img-fluid" src="{{ asset('bundles/easyadmin/img/logo.png') }}" alt="">
+      </a>
+    </div>
+    <div class="col-12 col-lg-9 row d-flex flex-row align-items-center my-flex-container ">
+      <div class="row col-12 col-lg-9 footer-link">
+        <ul class="col-6">
+          {% if is_granted('ROLE_USER') %}
+          <li class="nav-item">
+            <a class="nav-link footer-menu-item" href="{{path('logout')}}">Déconnexion</a>
+          </li>
+          {% else %}
+          <li class="nav-item  footer-menu-item{% if mainNavLogin is defined %}active{% endif %}">
+            <a class="nav-link" href="{{path('login')}}">Connexion</a>
+          </li>
+          {#
+          <li class="nav-item  footer-menu-item{% if mainNavRegistration is defined %}active{% endif %}">
+            <a class="nav-link" href="{{path('registration')}}">Inscription</a>
+          </li>
+          #} {% endif %}
+          {% if is_granted('ROLE_USER') %}
+          <li class="nav-item footer-menu-item {% if mainNavMember is defined %}active{% endif %}">
+            <a class="nav-link" href="{{path('user_post')}}">Rédacteur</a>
+          </li>
+          {% endif %} {% if is_granted('ROLE_ADMIN') %}
+          <li class="nav-item footer-menu-item {% if mainNavAdmin is defined %}active{% endif %}">
+            <a class="nav-link" target="_blank" href="{{path('admin')}}">Administration</a>
+          </li>
+          {% endif %}
+        </ul>
+        <ul class="col-6">
+          <li>
+            <a href="Faq.php" class="col-4 col-lg-3 footer-menu-item">
+              <h6>FAQ </h6>
+            </a>
+          </li>
+          <li>
+            <a href="{{path('blog')}}" class="col-4 col-lg-3 footer-menu-item">
+              <h6>Actualité </h6>
+            </a>
+          </li>
+          <li>
+            <a href="Contact.php" class="col-4 col-lg-3 footer-menu-item">
+              <h6>Contact </h6>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+<script src="{{ asset('bundles/easyadmin/javascript/js/jquery.fittext.js') }}" type="text/javascript"></script>
+<script type="text/javascript">
+  jQuery(".blog-post--description h2").fitText(1.2, { minFontSize: '15px', maxFontSize: '25px' });
+  jQuery(".body-blog .article-suggestion-card-box-titre small").fitText(1.2, { minFontSize: '15px', maxFontSize: '25px' });
+</script>
+</body>
+
 </html>

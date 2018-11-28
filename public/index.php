@@ -4,6 +4,7 @@ use App\Kernel;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 require __DIR__.'/../vendor/autoload.php';
 
@@ -37,3 +38,19 @@ $request = Request::createFromGlobals();
 $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
+
+/*Ajout Rochel*/
+
+$uri = $request->getPathInfo();
+$page = scandir(__DIR__.'/body/page');
+if ('/' === $uri) {
+    require_once __DIR__.'/layout/head/head.php';
+    require_once __DIR__.'/body/page/home.php';
+    require_once __DIR__.'/layout/footer/footer.php';
+}
+if(in_array(strtolower($uri), $page)){
+    $page = strtolower($uri);
+    require_once __DIR__.'/layout/head/head.php';
+    require_once __DIR__.'/body/page/'.$page.'';
+    require_once __DIR__.'/layout/footer/footer.php';
+}

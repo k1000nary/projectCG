@@ -1,0 +1,18 @@
+.service-telephonique {
+    margin: 10vh !important;
+  height: 35vh;
+  background-image: url("../img/service-telephonique.jpg");
+  background-size: cover;
+  background-position: right;
+  .service-telephonique--flex {
+    height: 100%;
+    .service-telephonique--flex---text {
+      p {
+        text-align: center;
+        color: white;
+        font-family: raleway;
+        margin-bottom: 0px !important;
+      }
+    }
+  }
+}

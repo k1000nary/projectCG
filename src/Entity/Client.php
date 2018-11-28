@@ -2,8 +2,6 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -59,29 +57,13 @@ class Client
     private $clientPaysNaissance;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Compte", cascade={"persist", "remove"})
-     */
-    private $clientCompte;
-
-    /**
      * @ORM\OneToOne(targetEntity="App\Entity\Contact", cascade={"persist", "remove"})
      */
     private $clientContact;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Demande", mappedBy="client")
-     */
-    private $clientDemande;
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Vehicule", mappedBy="client")
-     */
-    private $clientVehicule;
-
-    public function __construct()
+    public function __toString()
     {
-        $this->clientDemande = new ArrayCollection();
-        $this->clientVehicule = new ArrayCollection();
+        return $this->getClientNom();
     }
 
     public function getId(): ?int
@@ -185,18 +167,6 @@ class Client
         return $this;
     }
 
-    public function getClientCompte(): ?Compte
-    {
-        return $this->clientCompte;
-    }
-
-    public function setClientCompte(?Compte $clientCompte): self
-    {
-        $this->clientCompte = $clientCompte;
-
-        return $this;
-    }
-
     public function getClientContact(): ?Contact
     {
         return $this->clientContact;
@@ -205,68 +175,6 @@ class Client
     public function setClientContact(?Contact $clientContact): self
     {
         $this->clientContact = $clientContact;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Demande[]
-     */
-    public function getClientDemande(): Collection
-    {
-        return $this->clientDemande;
-    }
-
-    public function addClientDemande(Demande $clientDemande): self
-    {
-        if (!$this->clientDemande->contains($clientDemande)) {
-            $this->clientDemande[] = $clientDemande;
-            $clientDemande->setClient($this);
-        }
-
-        return $this;
-    }
-
-    public function removeClientDemande(Demande $clientDemande): self
-    {
-        if ($this->clientDemande->contains($clientDemande)) {
-            $this->clientDemande->removeElement($clientDemande);
-            // set the owning side to null (unless already changed)
-            if ($clientDemande->getClient() === $this) {
-                $clientDemande->setClient(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Vehicule[]
-     */
-    public function getClientVehicule(): Collection
-    {
-        return $this->clientVehicule;
-    }
-
-    public function addClientVehicule(Vehicule $clientVehicule): self
-    {
-        if (!$this->clientVehicule->contains($clientVehicule)) {
-            $this->clientVehicule[] = $clientVehicule;
-            $clientVehicule->setClient($this);
-        }
-
-        return $this;
-    }
-
-    public function removeClientVehicule(Vehicule $clientVehicule): self
-    {
-        if ($this->clientVehicule->contains($clientVehicule)) {
-            $this->clientVehicule->removeElement($clientVehicule);
-            // set the owning side to null (unless already changed)
-            if ($clientVehicule->getClient() === $this) {
-                $clientVehicule->setClient(null);
-            }
-        }
 
         return $this;
     }

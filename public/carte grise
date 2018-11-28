@@ -1,0 +1,81 @@
+A
+Numéro d'Immatriculation.
+B
+Date de la première mise en circulation du véhicule.
+C.1
+Nom, Prénom du Titulaire de la Carte Grise.
+C.4a
+Mention précisant si le Titulaire est le propriétaire du véhicule.
+C.4.1
+Champ réservé au(x) Co-Titulaire(s) dans le cas d'une Multi-Propriété du véhicule.
+C.3
+Adresse de résidence du Titulaire dans l'État membre du Titutlaire au moment de l'Immatriculation.
+Changement d'Adresse
+D.1
+Marque du véhicule.
+D.2
+Type du véhicule.
+D.2.1
+Code d'identification national du Type (En réception CE).
+D.3
+Modèle du véhicule (Dénomination commerciale).
+F.1
+Masse en charge maximale techniquement admissible en Kg (sauf motocycles).
+F.2
+Masse en charge maximale admissible du véhicule en service en Kg.
+F.3
+Masse en charge maximale admissible de l'ensemble en service en Kg.
+G
+Masse du véhicule en service avec carrosserie et dispositif d'attelage.
+G.1
+Poids à vide national en Kg.
+J
+Catégorie du véhicule CE.
+J.1
+Genre National.
+J.2
+Carrosserie CE.
+J.3
+Carrosserie : Désignation Nationale.
+K
+Numéro de réception par type (si disponible).
+P.1
+Cylindrée en cm3.
+P.2
+Puissance nette maximale en Kw (1 cheval DIN = 0,736 Kw).
+P.3
+Type de carburant (source d'énergie).
+P.6
+Puissance administrative nationale (Chevaux Fiscaux).
+Calcul de la Puissance Fiscale
+Q
+Rapport puissance/masse (Motocycles)
+S.1
+Nombre de places assises y compris le conducteur.
+S.2
+Nombre de places debout (Le cas échéant).
+U.1
+Niveau sonore à l'arrêt en dBa.
+U.2
+Vitesse du moteur (en min-1).
+V.7
+Émission CO2 en Gr/km.
+V.9
+Classe environnementale.
+X.1
+Date pour la visite du Contrôle Technique.
+Y.1
+Montant de la Taxe Régionale calculée en fonction du nombre de Chevaux Fiscaux et en fonction du Prix du Cheval Fiscal dans votre Région.
+Tarif Carte Grise par Région
+Y.2
+Montant de la Taxe pour le développement des actions de formation professionnelle dans les transports.
+Taxe sur les Véhicules de Société
+Y.3
+Montant de la Taxe CO2 ou Ecotaxe.
+Taxe CO2 et Ecotaxe
+Y.4
+Montant de la Taxe de Gestion Administrative.
+Y.5
+Montant de la redevance pour l'acheminement du Certificat d'Immatriculation.
+Y.6
+Montant Total des Taxes et de la redevance (Prix de la Carte Grise).

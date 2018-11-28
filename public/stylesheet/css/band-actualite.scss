@@ -1,0 +1,28 @@
+.band-actualite {
+  margin: 10vh !important;
+  height: 35vh;
+  background-image: url("../../img/band-actualite.jpg");
+  background-size: cover;
+  background-position: right;
+  .band-actualite--flex {
+    height: 100%;
+    .band-actualite--flex---text {
+      p {
+        text-align: center;
+        color: white;
+        font-family: raleway;
+      }
+    }
+  }
+  .btn{
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid white;
+    color: #70b3ce;
+    font-family: textr;
+    text-transform: uppercase;
+    font-weight: bold;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}

@@ -24,25 +24,56 @@ class User extends BaseUser
      */
     private $client;
 
+//    public $firstName;
+//
+//    /**
+//     * @return mixed
+//     */
+//    public function getFirstName()
+//    {
+//        return $this->firstName;
+//    }
+//
+//    /**
+//     * @param mixed $firstName
+//     */
+//    public function setFirstName($firstName): void
+//    {
+//        $this->firstName = $firstName;
+//    }
+//
+//    /**
+//     * @return mixed
+//     */
+//    public function getLastName()
+//    {
+//        return $this->lastName;
+//    }
+//
+//    /**
+//     * @param mixed $lastName
+//     */
+//    public function setLastName($lastName): void
+//    {
+//        $this->lastName = $lastName;
+//    }
+//
+//    public $lastName;
+
     public function __construct()
     {
         parent::__construct();
         // your own logic
     }
 
-    public function __construct()
-    {
-      parent::__construct();
-      // your own logic
-    }
-
     public function getClient(): ?Client
     {
-       return $this->client;
+        return $this->client;
     }
-   public function setClient(?Client $client): self
+
+    public function setClient(?Client $client): self
     {
-     $this->client = $client;
+        $this->client = $client;
 
         return $this;
     }

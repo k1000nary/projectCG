@@ -1,7 +1,4 @@
 framework:
-    templating:
-        engine: ['twig','php']
-
     secret: '%env(APP_SECRET)%'
     #default_locale: en
     #csrf_protection: true
@@ -33,4 +30,3 @@ framework:
 
         # APCu (not recommended with heavy random-write workloads as memory fragmentation can cause perf issues)
         #app: cache.adapter.apcu
-

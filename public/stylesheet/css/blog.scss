@@ -1,0 +1,131 @@
+.body-blog {
+  .btn-info{
+    color: #fff;
+background-color: $bleu !important;
+border-color: $bleu !important;
+  }
+  font-family: textr !important;
+  .article-suggestion-card{
+    background-color: rgb(242, 242, 242);
+    border-radius: 2px;
+  }
+  .article-suggestion-card-box-titre{
+small{
+  width: 80% !important;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: textr;
+  font-weight: bold;
+  font-size: 25px;
+}
+  }
+  .article-suggestion-card-box{
+    color: $bleu;
+    font-family: textr;
+    font-weight: bold;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .article-suggestion-card-box-img {
+   overflow: hidden;
+ }
+   .article-suggestion-card-box-img img{
+    max-width: 200% !important;
+  }
+  .show-article-titre{
+    font-family: textr;
+    color: $bleu;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .adsense {
+    border: 2px solid rgb(199, 199, 199);
+    height: 600px;
+    width: 80%;
+    background-image: url("https://9to5google.com/wp-content/uploads/sites/4/2016/10/google-adsense-logo1.jpg?quality=82&strip=all");
+    background-position: center;
+  }
+
+  .adsense-2 {
+    border: 2px solid rgb(199, 199, 199);
+    height: 380px;
+    width: 80%;
+    background-image: url("https://9to5google.com/wp-content/uploads/sites/4/2016/10/google-adsense-logo1.jpg?quality=82&strip=all");
+    background-position: center;
+  }
+.badge-info{
+  color: #fff;
+    background-color: $bleu;
+}
+  .pagination-css {
+    .pagination {
+      span {
+        border: 1px solid $bleu !important;
+        padding: 15px !important;
+        margin: 30px !important;
+        border-radius: 2px;
+        background-color: $bleu !important;
+        color: white !important;
+        font-weight: bold;
+        transition: all 1s ease;
+
+        &:hover {
+          background-color: $bleu-hover !important;
+        }
+
+        a {
+          color: white !important;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .pagination-css {
+    height: 200px;
+
+    .pagination {}
+  }
+
+  .badge-primary {
+    color: rgb(255, 255, 255);
+    background-color: $bleu;
+  }
+
+  .search {
+    h2 {}
+
+    button {
+      font-family: textr;
+      font-weight: bold;
+    }
+  }
+
+  .sidebar {
+    background-color: rgb(245, 245, 245);
+
+    h4 {
+      font-family: textr;
+      text-transform: uppercase;
+    }
+
+    ul {
+      li {
+        a {
+          font-family: textr;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .footer-menu-item {
+    color: white !important;
+
+    a {
+      color: white !important;
+    }
+  }
+
+  }

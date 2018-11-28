@@ -1,0 +1,50 @@
+.result-box{
+  border: 3px solid #012a6a;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  border-radius: 5px;
+}
+.result-box--titre h1{
+  text-align: center;
+  color: #012a6a;
+}
+.result-box--description---label{
+  margin-left: 2vh !important;
+  color: #012a6a;
+  margin-bottom:.67em;
+  width: 180px;
+  text-align: right;
+}
+.result-box--description---result{
+  font-weight: bold;
+  margin-left: 1vw;
+}
+
+.result-box--prix{
+  text-align: center;
+  color: #012a6a;
+}
+.result-box--titre button{
+  width: 80%;
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+
+.result-box--titre{
+  .btn-recalculcer{
+  background-color: white !important;
+  color: red !important;
+  }
+  .btn-commander{
+  background-color: white !important;
+  color: green !important;
+  }
+  .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
+      color: #fff;
+      background-color: #d6d6d6 !important;
+      background-image: none;
+      border-color: #01549b;
+  }
+
+}
