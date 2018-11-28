@@ -19,9 +19,31 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Client", cascade={"persist", "remove"})
+     */
+    private $client;
+
     public function __construct()
     {
         parent::__construct();
         // your own logic
+    }
+
+    public function __construct()
+    {
+      parent::__construct();
+      // your own logic
+    }
+
+    public function getClient(): ?Client
+    {
+       return $this->client;
+    }
+   public function setClient(?Client $client): self
+    {
+     $this->client = $client;
+
+        return $this;
     }
 }
